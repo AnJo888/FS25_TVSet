@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="tvSetObject">
+    <storeData>
+        <name>$l10n_storeItem_tvSet</name>
+        <functions>
+            <function>$l10n_function_tvSet</function>
+        </functions>
+        <image>store_tvSet.dds</image>
+        <price>450</price>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <category>misc</category>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tvSet</typeDesc>
+        <filename>TVSet.i3d</filename>
+        <!-- Área usada para posicionar o item ao ser entregue pela loja -->
+        <size width="1" length="0.6"/>
+        <components>
+            <!-- mass em kg: mantenha baixa para o jogador conseguir pegar na mão -->
+            <component centerOfMass="0 0.25 0" solverIterationCount="10" mass="5"/>
+        </components>
+        <!-- Permite pegar/carregar com a mão -->
+        <supportsPickUp>true</supportsPickUp>
+    </base>
+
+    <!-- activationRadius: distância (m) em que aparecem os prompts de ligar/canal -->
+    <tvSet defaultOn="false" defaultChannel="1" activationRadius="1.5">
+        <channel node="TVImage1"/>
+        <channel node="TVImage2"/>
+        <channel node="TVImage3"/>
+        <channel node="TVImage4"/>
+    </tvSet>
+
+    <!-- Nova hierarquia: collision é a raiz (componente dinâmico), visuals dentro dela -->
+    <i3dMappings>
+        <i3dMapping id="tvSet"    node="0>"/>
+        <i3dMapping id="TVImage1" node="0>0|1"/>
+        <i3dMapping id="TVImage2" node="0>0|2"/>
+        <i3dMapping id="TVImage3" node="0>0|3"/>
+        <i3dMapping id="TVImage4" node="0>0|4"/>
+    </i3dMappings>
+</vehicle>

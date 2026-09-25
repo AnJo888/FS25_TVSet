@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <texts>
+        <text name="storeItem_tvSet"       text="TV Set"/>
+        <text name="typeDesc_tvSet"        text="TV"/>
+        <text name="function_tvSet"        text="Portable TV. Can be carried, switched on and off, with channels."/>
+        <text name="action_tvTurnOn"       text="Turn TV on"/>
+        <text name="action_tvTurnOff"      text="Turn TV off"/>
+        <text name="action_tvNextChannel"  text="Next channel (%d/%d)"/>
+        <text name="input_TV_NEXT_CHANNEL" text="TV: next channel"/>
+    </texts>
+</l10n>

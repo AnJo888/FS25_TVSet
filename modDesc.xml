@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- Ajuste descVersion para o valor do patch atual do FS25 -->
+<modDesc descVersion="111">
+    <author>AnJo888</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>TV Set</en>
+        <br>Aparelho de TV</br>
+        <de>Fernseher</de>
+        <fr>Poste de Télévision</fr>
+    </title>
+    <description>
+        <en><![CDATA[Simple portable TV that can be carried, switched on and off, with channels.]]></en>
+        <br><![CDATA[TV simples que pode ser carregada, ligada e desligada, com troca de canais.]]></br>
+        <de><![CDATA[Einfacher, tragbarer Fernseher, der sich transportieren sowie ein- und ausschalten lässt und über Sender verfügt.]]></de>
+        <fr><![CDATA[Téléviseur portable simple, facile à transporter, doté d'un interrupteur marche/arrêt et de chaînes.]]></fr>
+    </description>
+    <iconFilename>icon_tvSet.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+    <l10n filenamePrefix="translations/translation"/>
+
+    <actions>
+        <action name="TV_NEXT_CHANNEL" category="ONFOOT"/>
+    </actions>
+
+    <inputBinding>
+        <actionBinding action="TV_NEXT_CHANNEL">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_n"/>
+        </actionBinding>
+    </inputBinding>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/TVSetStateEvent.lua"/>
+        <sourceFile filename="scripts/TVSetActivatable.lua"/>
+    </extraSourceFiles>
+
+    <specializations>
+        <specialization name="tvSet" className="TVSet" filename="scripts/TVSet.lua"/>
+    </specializations>
+
+    <vehicleTypes>
+        <type name="tvSetObject" parent="base" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="tvSet"/>
+        </type>
+    </vehicleTypes>
+
+    <storeItems>
+        <storeItem xmlFilename="xml/tvSet.xml"/>
+    </storeItems>
+</modDesc>

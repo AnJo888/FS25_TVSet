@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <texts>
+        <text name="storeItem_tvSet"       text="Aparelho de TV"/>
+        <text name="typeDesc_tvSet"        text="TV"/>
+        <text name="function_tvSet"        text="TV portátil. Pode ser carregada, ligada e desligada, com troca de canais."/>
+        <text name="action_tvTurnOn"       text="Ligar TV"/>
+        <text name="action_tvTurnOff"      text="Desligar TV"/>
+        <text name="action_tvNextChannel"  text="Trocar canal (%d/%d)"/>
+        <text name="input_TV_NEXT_CHANNEL" text="TV: próximo canal"/>
+    </texts>
+</l10n>
